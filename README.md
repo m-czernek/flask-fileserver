@@ -19,13 +19,13 @@ A simple Flask-based file management application with a clean web UI and RESTful
 To run the application, execute:
 
 ```bash
-# Create a Python virtual environment 
+# TODO: What does the next command do
 python3 -m venv venv
-# Activate the virtual environment
+# TODO: What does the next command do
 source venv/bin/activate
-# Install dependencies
+# TODO: What does the next command do
 pip install flask
-# Start the application
+# TODO: What does the next command do
 python3 app.py
 ```
 
@@ -51,10 +51,10 @@ curl http://127.0.0.1:5000/files
 ```
 
 #### 2. Upload a File
-- **Method:** `POST`
-- **URL:** `http://127.0.0.1:5000/files`
-- **Body:** Multipart form data with key `file` containing the file
-- **Response:** Success message or error
+- **Method:** TODO
+- **URL:** TODO
+- **Body:** TODO
+- **Response:** TODO
 
 **Example:**
 ```bash
@@ -76,69 +76,70 @@ curl -X POST -F "file=@/path/to/file.txt" http://127.0.0.1:5000/files
 ```
 
 #### 3. Download a File
-- **Method:** `GET`
-- **URL:** `http://127.0.0.1:5000/files/<filename>`
-- **Response:** File content as attachment
+- **Method:** TODO
+- **URL:** TODO
+- **Response:** TODO
 
 **Example:**
 ```bash
-curl -O http://127.0.0.1:5000/files/document.pdf
+# TODO
 ```
 
 #### 4. Rename a File
-- **Method:** `PUT`
-- **URL:** `http://127.0.0.1:5000/files/<filename>`
-- **Body:** JSON with `new_filename` key
-- **Response:** Success message or error
+- **Method:** TODO
+- **URL:** TODO
+- **Body:** TODO
+- **Response:** TODO
 
 **Example:**
 ```bash
-curl -X PUT -H "Content-Type: application/json" \
-  -d '{"new_filename":"new_name.txt"}' \
-  http://127.0.0.1:5000/files/old_name.txt
+# TODO
+# curl can use -d option to specify the payload
+# like curl ... -d '{"foo":"bar"}' $url
+# it requires application/json content type header
 ```
 
 **Success Response (200 OK):**
 ```json
 {
-  "message": "File successfully renamed from 'old_name.txt' to 'new_name.txt'"
+  "message": "TODO"
 }
 ```
 
 **Error Response (409 Conflict):**
 ```json
 {
-  "error": "A file named 'new_name.txt' already exists"
+  "error": "TODO"
 }
 ```
 
 #### 5. Delete a File
-- **Method:** `DELETE`
-- **URL:** `http://127.0.0.1:5000/files/<filename>`
-- **Response:** Success message or error
+- **Method:** TODO
+- **URL:** TODO
+- **Response:** TODO
 
 **Example:**
 ```bash
-curl -X DELETE http://127.0.0.1:5000/files/document.pdf
+# TODO
 ```
 
 **Success Response (200 OK):**
 ```json
 {
-  "message": "File 'document.pdf' deleted successfully"
+  "message": "TODO"
 }
 ```
 
 **Error Response (404 Not Found):**
 ```json
 {
-  "error": "File 'document.pdf' not found"
+  "error": "TODO"
 }
 ```
 
 ## File Storage
 
-Uploaded files are stored in the `uploads/` directory within the project root. This directory is automatically created when the application starts if it doesn't already exist.
+Uploaded files are stored in the `TODO/` directory within the project root. This directory is automatically created when the application starts if it doesn't already exist.
 
 ## Error Handling
 
